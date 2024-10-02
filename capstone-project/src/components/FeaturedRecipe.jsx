@@ -27,7 +27,7 @@ function Featured() {
 
      setLoading(false);
     }
-    //Runs the function only once when component mounts
+    //Runs function and the useEffect hook runs only once when component mounts
     fetchRandomMeal();
   },[])
 
