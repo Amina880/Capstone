@@ -3,7 +3,7 @@ import axios from "axios";
 const url = 'https://www.themealdb.com/api/json/v1/1/'
 
 //Search Recipe By Name
-const searchRecipes = async(recipeName) => {
+const searchRecipes = async({recipeName}) => {
 
     try {
         const response = await axios.get(`${url}search.php?s=${recipeName}`);
