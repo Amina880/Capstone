@@ -3,7 +3,7 @@ import Home from "./pages/Home"
 import AllCategories from "./pages/AllCategories"
 import SearchResults from "./pages/SearchResults"
 import RecipeDetailsPage from "./pages/RecipeDetailsPage"
-import FilterUsingCategories from "./components/FilterByCategories"
+import CategoryPage from "./pages/CategoryPage"
 function App() {
   
   return (
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/categories" element={<AllCategories />}/>
-        <Route path="/categories/:categoryName" element={<FilterUsingCategories />}/>
+        <Route path="/categories/:categoryName" element={<CategoryPage />}/>
         <Route path="/results" element={<SearchResults />}/> {/* Search queries are unknown to us  */}
         <Route path="/recipe-details/:recipeId" element={<RecipeDetailsPage />}/> {/*Recipe id is known to us */}
       </Routes>
