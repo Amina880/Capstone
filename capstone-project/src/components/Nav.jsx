@@ -6,6 +6,7 @@ function Nav() {
     <nav>
         <Link to="/">Home</Link>
         <Link to="/categories">Categories</Link>
+        <Link to="/favourites">Favorites</Link>
       
     </nav>
   )
