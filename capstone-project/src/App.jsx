@@ -4,6 +4,7 @@ import AllCategories from "./pages/AllCategories"
 import SearchResults from "./pages/SearchResults"
 import RecipeDetailsPage from "./pages/RecipeDetailsPage"
 import CategoryPage from "./pages/CategoryPage"
+import FavouritePage from "./pages/FavouritePage"
 function App() {
   
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/categories/:categoryName" element={<CategoryPage />}/>
         <Route path="/results" element={<SearchResults />}/> {/* Search queries are unknown to us  */}
         <Route path="/recipe-details/:recipeId" element={<RecipeDetailsPage />}/> {/*Recipe id is known to us */}
+        <Route path="/favourites" element={<FavouritePage />}/>
       </Routes>
     </Router>
     </>
