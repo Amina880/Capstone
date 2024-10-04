@@ -1,6 +1,7 @@
 import { getRecipeById } from "../services/recipeService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import FavouritesButton from "./FavouritesButton";
 
 function RecipeDetails() {
     //Get recipeId from url
@@ -66,6 +67,7 @@ function RecipeDetails() {
     <div>
         {/*Renders recipe title, embedded video, category, cuisine, list of ingredients with measures, list of instructions and the source link  */}
         <p>{recipe.strMeal}</p>
+        <FavouritesButton />
         <div key={recipe.idMeal}>
             {youtubeEmbedLink && (
             <iframe 
