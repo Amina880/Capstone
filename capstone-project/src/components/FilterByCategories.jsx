@@ -1,6 +1,7 @@
 import { filterbyCategories } from "../services/recipeService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function FilterUsingCategories() {
   //Get categoryName from url
@@ -39,14 +40,18 @@ function FilterUsingCategories() {
   return (
     <>
     <div>
-      <p>{categoryName}</p>
-      {/*Renders the recipe image and title */}
-      {recipes.map(recipe => (
-        <div key={recipe.idMeal} >
-          <img src={recipe.strMealThumb} alt="Recipe Image"/>
-          <p>{recipe.strMeal}</p>
-        </div>
+      <p className="md:mx-16 mx-10 my-8 text-3xl pb-4 font-extralight border-b-2 border-black">{categoryName}</p>
+      {/*Renders the recipe image and title of each recipe in the category */}
+      <div className="md:mx-16 mx-10 grid md:grid-cols-3 grid-cols-2 gap-6 pb-12 ">
+        {recipes.map(recipe => (
+          <div className="hover:shadow-xl rounded-xl hover:scale-95 bg-gray-100" key={recipe.idMeal} >
+            <Link to={`/recipe-details/${recipe.idMeal}`}>
+            <img className="rounded-t-xl pb-4" src={recipe.strMealThumb} alt="Recipe Image"/>
+            <p className="font-semibold md:text-xl text-base text-center md:pb-8 pb-2 px-1 ">{recipe.strMeal}</p>
+            </Link>
+          </div>
       ))}
+      </div>
     </div>
       
     </>
