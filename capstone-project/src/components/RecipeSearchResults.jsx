@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import searchRecipes from "../services/recipeService";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function RecipeList() {
     //Get search params from url 
@@ -37,23 +38,30 @@ function RecipeList() {
 
     if(loading) return <p>Loading...</p>;
     if(errors) return <p>{errors}</p>;
-    if(!recipes) return <div><p>Sorry, no recipes match '{searchQuery}'</p><p>But don't give up. Please check the spelling or try again with a different term. </p></div>
+    if(!recipes) return <div className="mx-16 w-full pb-12 "><p className="text-2xl " >Sorry, no recipes match '{searchQuery}'</p><p>But don't give up. Please check the spelling or try again with a different term. </p></div>
     
     
     return (
     <>
     <div>
-        <p>Search Results for '{searchQuery}'</p>
+        <p className="md:mx-14 mx-8 my-8 md:text-3xl text-2xl pb-4 font-extralight border-b-2 border-black">Search Results for '{searchQuery}'</p>
         {/*Renders recipe title, image, category and cuisine */}
-        {recipes.map(recipe => (
-                <div key={recipe.idMeal}>
-                    <img src={recipe.strMealThumb} alt="Meal picture"/>
-                    <p>{recipe.strMeal}</p>
-                    <p>{recipe.strCategory}</p>
-                    <p>{recipe.strArea}</p>
+        <div className="md:mx-14 mx-8 grid md:grid-cols-3 grid-cols-2 gap-6 pb-12 ">
+            {recipes.map(recipe => (
+                <div className="hover:shadow-xl rounded-xl hover:scale-95" key={recipe.idMeal}>
+                    <Link to={`/recipe-details/${recipe.idMeal}`}>
+                    <img className="rounded-t-xl pb-2" src={recipe.strMealThumb} alt="Meal picture"/>
+                    <div className="md:flex md:justify-between justify-center items-center pb-8 md:px-1 " >
+                        <p className="font-semibold md:text-xl text-lg md:text-left text-center text-wrap md:w-52 w-full">{recipe.strMeal}</p>
+                        <Link to={`/categories/${recipe.strCategory}`}>
+                            <p className="font-light md:text-lg text-base text-center px-1 bg-[#FFBF69] bg-opacity-60">{recipe.strCategory}</p>
+                        </Link>
+                        <p className="font-light md:text-lg text-base text-center px-1 bg-[#CBF3F0]">{recipe.strArea}</p>
+                    </div>
+                    </Link>
                 </div>
-            
-        ))}  
+            ))} 
+        </div> 
     </div>
    
     </>
