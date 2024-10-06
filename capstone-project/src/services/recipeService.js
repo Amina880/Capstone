@@ -1,5 +1,7 @@
 import axios from "axios";
 
+//Fetch data from the API
+
 const url = 'https://www.themealdb.com/api/json/v1/1/'
 
 //Search Recipe By Name
