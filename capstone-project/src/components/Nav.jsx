@@ -20,12 +20,12 @@ function Nav() {
         {/*Links */}
         <div className="flex w-full mx-auto items-center justify-evenly px-12 py-8 ">
             <Link to="/"><p className="mr-28 font-semibold text-base">Home</p></Link>
-            <Link to="/categories"><p className="mr-72 font-semibold text-base">Categories</p></Link>
+            <Link to="/categories"><p className="mr-32 font-semibold text-base">Categories</p></Link>
             {/*Search Bar Conditional Rendering */}
             {location.pathname !=="/" && <SearchBar />}
             <Link to="/favourites">
             <img
-            className="w-6"
+            className="w-8"
             src="/public/Images/3643770_favorite_heart_like_likes_love_icon.png"
             alt="favourite icon"
             />
@@ -35,7 +35,7 @@ function Nav() {
     </nav>
 
     {/*Hamburger Menu */}
-    <nav className="md:hidden flex w-full justify-between items-center py-3 px-3">
+    <nav className="md:hidden flex w-full md:justify-between justify-evenly items-center py-3 px-3">
         {/*Logo*/}
         <Link to="/"><img className="md:w-28 w-16 m-6 md:m-8" src="/public/Images/taste-quest-high-resolution-logo-black-transparent.png" alt="logo"/></Link>
         {/*Search Bar Conditional Rendering */}
