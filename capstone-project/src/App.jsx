@@ -6,7 +6,7 @@ import RecipeDetailsPage from "./pages/RecipeDetailsPage"
 import CategoryPage from "./pages/CategoryPage"
 import FavouritePage from "./pages/FavouritePage"
 function App() {
-  
+  document.title = "Taste Quest Recipe Finder"
   return (
     <>
     {/*Set up Routing */}
