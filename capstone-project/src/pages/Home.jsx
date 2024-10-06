@@ -12,7 +12,7 @@ function Home() {
       <Nav />
       <div className="mx-auto max-[390px]:w-72 w-96 md:w-[970px] pt-28 ">
         <div className="pb-20">
-            <p className="text-4xl text-center pb-12 font-extralight ">What Would You Like To Eat Today?</p>
+            <p className="md:text-4xl text-3xl text-center pb-12 font-extralight ">What Would You Like To Eat Today?</p>
             <SearchBar />
         </div>
       
