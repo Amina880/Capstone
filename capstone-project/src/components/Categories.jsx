@@ -1,6 +1,6 @@
 import { fetchRecipeCategories } from "../services/recipeService"
 import { useState, useEffect } from "react"
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 function Categories() {
     //State Management
     const [categories, setCategories] = useState([]);
@@ -37,20 +37,28 @@ function Categories() {
 
   return (
     <>
-    <div>
-    {/*Conditional rendering based on path */}
-    {location.pathname === "/" && categories.slice(0,6).map((category) => (
-        <div key={category.idCategory} >
-            <p>{category.strCategory}</p>
-            <img src={category.strCategoryThumb} alt="Category image" />
-        </div>
-    ))}
-    {location.pathname === "/categories" && categories.map((c) => (
-        <div key={c.idCategory} >
-            <p>{c.strCategory}</p>
-            <img src={c.strCategoryThumb} alt="Category image" />
-        </div>
-    ))}
+    <div className=" md:flex pb-14 grid grid-cols-3 gap-2 ">
+        {/*Conditional rendering for home page */}
+        {location.pathname === "/" && categories.slice(0,6).map((category) => (
+            (<Link to={`/categories/${category.strCategory}`}>
+            <div className="mx-2"key={category.idCategory} >
+                <img src={category.strCategoryThumb} alt="Category image" />
+                <p className="text-center py-4 font-semibold">{category.strCategory}</p>
+            </div>
+            </Link>)
+        ))}
+    </div>
+
+    <div className="grid md:grid-cols-5 grid-cols-3 md:gap-8 gap-6 md:mx-16 mx-8 pb-10">
+        {/*Conditional rendering for categories page */}
+        {location.pathname === "/categories" && categories.map((c) => (
+            (<Link to={`/categories/${c.strCategory}`}>
+            <div className="hover:shadow-lg rounded-md" key={c.idCategory} >
+                <img className="hover:scale-105" src={c.strCategoryThumb} alt="Category image" />
+                <p className="text-center py-4 font-semibold md:text-base text-sm">{c.strCategory}</p>
+            </div>
+            </Link>)
+        ))}
     </div>
     </>
   )
