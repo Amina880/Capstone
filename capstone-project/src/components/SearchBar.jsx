@@ -80,11 +80,11 @@ function SearchBar() {
                 {isOpen && (
                     <form className="md:hidden flex items-center sm:justify-between w-fit right-0 ml-8  border-black border-2 rounded-xl " onSubmit={onSearch} >
                         <div className="flex items-center max-[460px]:w-24 p-1">
-                            <button className=" w-5 ml-auto mr-1 " onClick={toggleSearch}><X className="max-[460px]:w-3" /></button>
-                            <input className="pb-1 md:ml-8 ml-1 w-16 max-[460px]:w-8 " type="text" value={recipeName} placeholder="Search..." onChange={onChange} required/>
+                            <button className=" w-5 ml-auto mr-1 " onClick={toggleSearch}><X className="max-[460px]:w-4" /></button>
+                            <input className="pb-1 md:ml-8 ml-1 w-16 max-[460px]:w-8 " type="text" value={recipeName} onChange={onChange} required/>
                             {errors.recipeName && <p>{errors.recipeName}</p>}
                             <button className="w-5 m-1" type="submit" >
-                                <img className="max-[460px]:w-3" src="/Images/211817_search_strong_icon.png"/>
+                                <img className="max-[460px]:w-4" src="/Images/211817_search_strong_icon.png"/>
                             </button>
                         </div>
                     </form>
