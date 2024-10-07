@@ -15,7 +15,7 @@ function Nav() {
     {/*Nav bar for larger pages */}
     <nav className="hidden md:flex mx-auto w-full justify-center items-center ">
         {/*Logo*/}
-        <Link to="/"><img className="w-28 m-8" src="/public/Images/taste-quest-high-resolution-logo-black-transparent.png" alt="logo"/></Link>
+        <Link to="/"><img className="w-28 m-8" src="/Images/taste-quest-high-resolution-logo-black-transparent.png" alt="logo"/></Link>
 
         {/*Links */}
         <div className="flex w-full mx-auto items-center justify-evenly px-12 py-8 ">
@@ -26,7 +26,7 @@ function Nav() {
             <Link to="/favourites">
             <img
             className="w-8"
-            src="/public/Images/3643770_favorite_heart_like_likes_love_icon.png"
+            src="/Images/3643770_favorite_heart_like_likes_love_icon.png"
             alt="favourite icon"
             />
             </Link>
@@ -37,7 +37,7 @@ function Nav() {
     {/*Hamburger Menu */}
     <nav className="md:hidden flex w-full md:justify-between justify-evenly items-center py-3 px-3">
         {/*Logo*/}
-        <Link to="/"><img className="md:w-28 w-16 m-6 md:m-8" src="/public/Images/taste-quest-high-resolution-logo-black-transparent.png" alt="logo"/></Link>
+        <Link to="/"><img className="md:w-28 w-16 m-6 md:m-8" src="/Images/taste-quest-high-resolution-logo-black-transparent.png" alt="logo"/></Link>
         {/*Search Bar Conditional Rendering */}
         {location.pathname !=="/" && <SearchBar />}
         {/* Toggle Menu Icons */}
