@@ -38,9 +38,6 @@ function FavouritesResults() {
         if(storedRecipeIds.length > 0){
             getFavRecipes();
         }
-        else{
-            setErrors('Sorry, no favourite recipes found')
-        }
         //UseEffecthook runs only once when the component mounts
     },[]);
     
@@ -69,7 +66,7 @@ function FavouritesResults() {
             ))} 
         </div>  
         ):(
-            <p className="mx-16 w-full text-3xl"> No favourite recipes yet</p>
+            <p className="md:mx-16 mx-10 md:w-full w-52 pb-12 md:text-3xl text-xl"> No favourite recipes yet</p>
         )}
         
         </>
