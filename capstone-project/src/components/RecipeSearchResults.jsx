@@ -38,7 +38,7 @@ function RecipeList() {
 
     if(loading) return <p>Loading...</p>;
     if(errors) return <p>{errors}</p>;
-    if(!recipes) return <div className="mx-16 w-full pb-12 "><p className="text-2xl " >Sorry, no recipes match '{searchQuery}'</p><p>But don't give up. Please check the spelling or try again with a different term. </p></div>
+    if(!recipes) return <div className="md:mx-16 mx-10 md:w-full w-56 pb-12 "><p className="text-2xl " >Sorry, no recipes match '{searchQuery}'</p><p>But don't give up. Please check the spelling or try again with a different term. </p></div>
     
     
     return (
