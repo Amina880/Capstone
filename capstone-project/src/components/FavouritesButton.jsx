@@ -25,7 +25,7 @@ return (
   <div>
     {/*Favourite button */}
       <button type="submit" onClick={onClick}>
-        <img className="w-8 p-1 mx-4 bg-[#2EC4B6] bg-opacity-65 rounded-2xl" src="/public/Images/3643770_favorite_heart_like_likes_love_icon.png" />
+        <img className="w-8 p-1 mx-4 bg-[#2EC4B6] bg-opacity-65 rounded-2xl" src="/Images/3643770_favorite_heart_like_likes_love_icon.png" />
       </button>
   </div>
 )

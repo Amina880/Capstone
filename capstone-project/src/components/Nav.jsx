@@ -51,6 +51,7 @@ function Nav() {
         <div className="flex flex-col items-center justify-center w-full left-0 bg-white h-screen ">
             <Link to="/" onClick={toggleNav}><p className="py-2 font-semibold text-base">Home</p></Link>
             <Link to="/categories" onClick={toggleNav}><p className=" py-2 font-semibold text-base">Categories</p></Link>
+            <Link to="/favourites" onClick={toggleNav}><p className=" py-2 font-semibold text-base">Favourites</p></Link>
         </div>
     )}
    

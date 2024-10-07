@@ -55,7 +55,7 @@ function SearchBar() {
                 <input className="w-3/4" type="text" value={recipeName} placeholder="Search for a Recipe" onChange={onChange} required />
                 {errors.recipeName && <p>{errors.recipeName}</p>}
                 <button className="w-8 " type="submit" >
-                    <img src="/public/Images/211817_search_strong_icon.png"/>
+                    <img src="/Images/211817_search_strong_icon.png"/>
                 </button>
             </form>
             
@@ -69,13 +69,13 @@ function SearchBar() {
                     <input className="w-3/4 pl-4 bg-[#CBF3F0]" type="text" value={recipeName} placeholder="Search..." onChange={onChange} required/>
                     {errors.recipeName && <p>{errors.recipeName}</p>}
                     <button className="w-8 " type="submit" >
-                        <img src="/public/Images/211817_search_strong_icon.png"/>
+                        <img src="/Images/211817_search_strong_icon.png"/>
                     </button>
                 </form>
 
                 {/*Only renders on smaller screens where only the search icon is displayed and expandable when clicked */}
                 <button onClick={toggleSearch} className="ml-auto md:hidden ">
-                    {isOpen ? isOpen: <img className=" w-6 " src="/public/Images/211817_search_strong_icon.png"/>}
+                    {isOpen ? isOpen: <img className=" w-6 " src="/Images/211817_search_strong_icon.png"/>}
                 </button>
                 {isOpen && (
                     <form className="md:hidden flex items-center sm:justify-between w-fit right-0 ml-8  border-black border-2 rounded-xl " onSubmit={onSearch} >
@@ -84,7 +84,7 @@ function SearchBar() {
                             <input className="pb-1 md:ml-8 ml-1 w-16 max-[460px]:w-8 " type="text" value={recipeName} placeholder="Search..." onChange={onChange} required/>
                             {errors.recipeName && <p>{errors.recipeName}</p>}
                             <button className="w-5 m-1" type="submit" >
-                                <img className="max-[460px]:w-3" src="/public/Images/211817_search_strong_icon.png"/>
+                                <img className="max-[460px]:w-3" src="/Images/211817_search_strong_icon.png"/>
                             </button>
                         </div>
                     </form>
